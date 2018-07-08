@@ -10,7 +10,7 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String Name;
     private String Surname;
     private Date birthDate;
@@ -20,11 +20,18 @@ public class User {
     public User() {
     }
 
-    public int getId() {
+    public User(String name, String surname, Date birthDate, String email) {
+        Name = name;
+        Surname = surname;
+        this.birthDate = birthDate;
+        this.email = email;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

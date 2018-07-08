@@ -28,6 +28,7 @@ public class ApplicationConfiguration {
 		HibernateJpaVendorAdapter bean = new HibernateJpaVendorAdapter();
 		bean.setDatabase(Database.H2);
 		bean.setGenerateDdl(true);
+		bean.setShowSql(true);
 		return bean;
 	}
 
